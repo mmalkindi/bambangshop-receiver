@@ -108,3 +108,19 @@ Untuk mengatasi limitasi tersebut, kita perlu menggunakan `lazy_static` dan `RwL
 digunakan di banyak thread (multithreading).
 
 #### Reflection Subscriber-2
+
+Q: Have you explored things outside of the steps in the tutorial, for example: `src/lib.rs`? If not, explain why you did not do so.
+If yes, explain things that you have learned from those other parts of code.
+
+A: ...
+
+Q: Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver,
+explain how Observer pattern eases you to plug in more subscribers.
+How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
+
+A: ...
+
+Q: Have you tried to make your own Tests, or enhance documentation on your **Postman collection**?
+If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+
+A: ...
