@@ -94,4 +94,14 @@ This is the place for you to write reflections:
 
 #### Reflection Subscriber-1
 
+Q: In this tutorial, we used `RwLock<>` to synchronise the use of `Vec` of `NOTIFICATIONS`.
+Explain why it is necessary for this case, and explain why we do not use `Mutex<>` instead?
+
+A: ...
+
+Q: In this tutorial, we used `lazy_static` external library to define `Vec` and `DashMap` as a "`static`" variable.
+Compared to Java where we can mutate the content of a `static` variable via a `static` function, why did not Rust allow us to do so?
+
+A: ...
+
 #### Reflection Subscriber-2
