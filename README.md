@@ -84,7 +84,7 @@ You can install Postman via this website: <https://www.postman.com/downloads/>
   - [x] Commit: `Implement receive function in Notification controller.`
   - [x] Commit: `Implement list_messages function in Notification service.`
   - [x] Commit: `Implement list function in Notification controller.`
-  - [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+  - [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 
@@ -112,15 +112,21 @@ digunakan di banyak thread (multithreading).
 Q: Have you explored things outside of the steps in the tutorial, for example: `src/lib.rs`? If not, explain why you did not do so.
 If yes, explain things that you have learned from those other parts of code.
 
-A: ...
+A: Yes. Dari eksplorasi saya, `src/lib.rs` berisi informasi dan definisi fungsi-fungsi penting yang akan digunakan oleh aplikasi.
+Salah satunya adalah definisi dari fungsi `compose_error_response` yang akan menangani response error.
+File tersebut juga mendefinisikan *singleton* seperti `REQWEST_CLIENT` dan `APP_CONFIG` yang diakses oleh aplikasi.
 
 Q: Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver,
 explain how Observer pattern eases you to plug in more subscribers.
 How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
 
-A: ...
+A: Penambahan subscriber dapat dilakukan dengan menambahkan suatu Subscriber baru ke daftar Observer.
+Observer Pattern memudahkan hal tersebut karena kita hanya perlu menambahkan instance Receiver (Subscriber).
+Apabila ada lebih dari satu instance Main (Publisher), dapat terjadi masalah terkait duplikat data karena data `Product` disimpan di `DashMap` yang tidak
+*shared* antara instance Main. Namun, sistem notifikasi akan tetap berjalan.
 
 Q: Have you tried to make your own Tests, or enhance documentation on your **Postman collection**?
 If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
 
-A: ...
+A: Sudah, menurut saya fitur-fitur tersebut akan membantu proses development Group Project.
+Saya dapat membagikan Collection yang telah dibuat dengan developer lainnya sehingga mereka dapat memahami API yang telah saya buat serta melakukan *testing* dengan mudah.
